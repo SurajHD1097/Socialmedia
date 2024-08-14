@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "4e72cf12-ca7e-47eb-954a-4613f01e52ac",
+		"name": "Docker Collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32751245"
+	},
+	"item": [
+		{
+			"name": "Search",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzNTU2Nzc5LCJpYXQiOjE3MjM1NTMxNzksImp0aSI6ImY3NTg5NTFhODY4ZDQyOTZiMDZjOGJiZTE2ZDAzMjI3IiwidXNlcl9pZCI6OH0.WY7DPjk85nzdMH5YDoN1aZKxdKL9UUfChPj6UcbqcYc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/friends/search/?q=user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"friends",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "user"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Suggestion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzNTU2Nzc5LCJpYXQiOjE3MjM1NTMxNzksImp0aSI6ImY3NTg5NTFhODY4ZDQyOTZiMDZjOGJiZTE2ZDAzMjI3IiwidXNlcl9pZCI6OH0.WY7DPjk85nzdMH5YDoN1aZKxdKL9UUfChPj6UcbqcYc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/friends/suggestion/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"friends",
+						"suggestion",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"userone@mail.com\",\r\n    \"password\": \"user@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/authentication/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"authentication",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"userseven@mail.com\",\r\n    \"password\": \"userseven@123\",\r\n    \"first_name\": \"User\",\r\n    \"last_name\": \"Seven\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/authentication/signup/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"authentication",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzNTU2Nzc5LCJpYXQiOjE3MjM1NTMxNzksImp0aSI6ImY3NTg5NTFhODY4ZDQyOTZiMDZjOGJiZTE2ZDAzMjI3IiwidXNlcl9pZCI6OH0.WY7DPjk85nzdMH5YDoN1aZKxdKL9UUfChPj6UcbqcYc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to_user\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/friends/sendrequest/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"friends",
+						"sendrequest",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzNTU3MzY0LCJpYXQiOjE3MjM1NTM3NjQsImp0aSI6IjgzNDNiZWFmZDkyMzRkMGY4NDk2MjE3N2NiMGRiNTAzIiwidXNlcl9pZCI6M30.58lAVUbQB26BKm4kVgti3bR0khes2yQZpWaFHyLDvN0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/friends/acceptrequest/8/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"friends",
+						"acceptrequest",
+						"8",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pending Requests",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzNTU3NzYxLCJpYXQiOjE3MjM1NTQxNjEsImp0aSI6ImU0ZjM2NzNlNTJjNjQ5NjBiNDA3NmUwN2VhYzI5YmU0IiwidXNlcl9pZCI6Mn0.jeqDC2CRxT4s4ELovTGScxjSWyZCSMwOY7W1jhvZ0eI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/friends/pendingrequests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"friends",
+						"pendingrequests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reject Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzNTU3NzYxLCJpYXQiOjE3MjM1NTQxNjEsImp0aSI6ImU0ZjM2NzNlNTJjNjQ5NjBiNDA3NmUwN2VhYzI5YmU0IiwidXNlcl9pZCI6Mn0.jeqDC2CRxT4s4ELovTGScxjSWyZCSMwOY7W1jhvZ0eI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/friends/rejectrequest/7/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"friends",
+						"rejectrequest",
+						"7",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Friends List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzNTU3NzYxLCJpYXQiOjE3MjM1NTQxNjEsImp0aSI6ImU0ZjM2NzNlNTJjNjQ5NjBiNDA3NmUwN2VhYzI5YmU0IiwidXNlcl9pZCI6Mn0.jeqDC2CRxT4s4ELovTGScxjSWyZCSMwOY7W1jhvZ0eI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/friends/friendslist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"friends",
+						"friendslist"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
